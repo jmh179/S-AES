@@ -1,3 +1,4 @@
+#异或
 def yihuo(str, key):
     result = ''.join(['0' if s == k else '1' for s, k in zip(str, key)])
     return result
@@ -112,7 +113,6 @@ class S_AES_string:
             p_text = self.hang_yiwei(p_text)  # 行移位
             ciphertext0 = yihuo(p_text, self.w4 + self.w5)  # 轮秘钥加
             miwen += self.binary_to_ascii(ciphertext0[0:8]) + self.binary_to_ascii(ciphertext0[8:16])
-        print("密文为: " + str(miwen))
         return miwen
 
     # 解密
@@ -138,7 +138,6 @@ class S_AES_string:
             # 轮秘钥加
             Plainttext0 = yihuo(ciphertext, self.w0 + self.w1)
             mingwen += self.binary_to_ascii(Plainttext0[0:8]) + self.binary_to_ascii(Plainttext0[8:16])
-        print("明文为: " + mingwen)
         return mingwen
 
     def binary_to_ascii(self, binary_str):
@@ -152,9 +151,14 @@ class S_AES_string:
         return binary
 
 
-def use(text, key):
+def str_use_jiami(text, key):
     s_aes = S_AES_string(key)
     # 输入明文分组为2 Bytes
     enc = s_aes.jiami(text)
-    det = s_aes.jiemi(enc)
-    return enc, det
+    return enc
+
+def str_use_jiemi(text, key):
+    s_aes = S_AES_string(key)
+    # 输入密文分组为2 Bytes
+    det = s_aes.jiemi(text)
+    return det
