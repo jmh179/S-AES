@@ -1,4 +1,3 @@
-#异或
 def yihuo(str, key):
     result = ''.join(['0' if s == k else '1' for s, k in zip(str, key)])
     return result
