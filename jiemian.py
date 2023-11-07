@@ -173,7 +173,7 @@ class Ui_Form(object):
 
         self.in_mi4 = QLineEdit(self.layoutWidget_2)
         self.in_mi4.setObjectName(u"in_mi4")
-        self.in_mi4.setMaxLength(16)
+        self.in_mi4.setMaxLength(2)
 
         self.horizontalLayout_16.addWidget(self.in_mi4)
 
@@ -410,7 +410,7 @@ class Ui_Form(object):
 
         self.key5 = QLineEdit(self.layoutWidget_3)
         self.key5.setObjectName(u"key5")
-        self.key5.setMaxLength(16)
+        self.key5.setMaxLength(48)
 
         self.horizontalLayout_18.addWidget(self.key5)
 
@@ -426,7 +426,7 @@ class Ui_Form(object):
 
         self.in_ming5 = QLineEdit(self.layoutWidget_3)
         self.in_ming5.setObjectName(u"in_ming5")
-        self.in_ming5.setMaxLength(16)
+        self.in_ming5.setMaxLength(48)
 
         self.horizontalLayout_19.addWidget(self.in_ming5)
 
@@ -448,7 +448,7 @@ class Ui_Form(object):
 
         self.in_mi5 = QLineEdit(self.layoutWidget_3)
         self.in_mi5.setObjectName(u"in_mi5")
-        self.in_mi5.setMaxLength(16)
+        self.in_mi5.setMaxLength(48)
 
         self.horizontalLayout_20.addWidget(self.in_mi5)
 
