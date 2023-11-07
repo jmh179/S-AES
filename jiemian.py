@@ -478,35 +478,21 @@ class Ui_Form(object):
 
         self.horizontalLayout_17.addLayout(self.verticalLayout_10)
 
-        self.layoutWidget3 = QWidget(Form)
-        self.layoutWidget3.setObjectName(u"layoutWidget3")
-        self.layoutWidget3.setGeometry(QRect(470, 450, 304, 118))
-        self.verticalLayout_11 = QVBoxLayout(self.layoutWidget3)
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.label_21 = QLabel(self.layoutWidget3)
+        self.label_21 = QLabel(Form)
         self.label_21.setObjectName(u"label_21")
-
-        self.verticalLayout_11.addWidget(self.label_21)
-
-        self.label_22 = QLabel(self.layoutWidget3)
+        self.label_21.setGeometry(QRect(471, 451, 150, 16))
+        self.label_22 = QLabel(Form)
         self.label_22.setObjectName(u"label_22")
+        self.label_22.setGeometry(QRect(471, 473, 174, 17))
         self.label_22.setTextInteractionFlags(Qt.LinksAccessibleByMouse|Qt.TextSelectableByMouse)
-
-        self.verticalLayout_11.addWidget(self.label_22)
-
-        self.label_23 = QLabel(self.layoutWidget3)
+        self.label_23 = QLabel(Form)
         self.label_23.setObjectName(u"label_23")
+        self.label_23.setGeometry(QRect(471, 497, 302, 17))
         self.label_23.setTextInteractionFlags(Qt.LinksAccessibleByMouse|Qt.TextSelectableByMouse)
-
-        self.verticalLayout_11.addWidget(self.label_23)
-
-        self.label_24 = QLabel(self.layoutWidget3)
+        self.label_24 = QLabel(Form)
         self.label_24.setObjectName(u"label_24")
+        self.label_24.setGeometry(QRect(471, 521, 246, 51))
         self.label_24.setTextInteractionFlags(Qt.LinksAccessibleByMouse|Qt.TextSelectableByMouse)
-
-        self.verticalLayout_11.addWidget(self.label_24)
-
 
         self.retranslateUi(Form)
 
@@ -558,6 +544,5 @@ class Ui_Form(object):
         self.label_21.setText(QCoreApplication.translate("Form", u"\u53c2\u8003\u5bc6\u94a5\uff08\u53ef\u590d\u5236\u4f7f\u7528", None))
         self.label_22.setText(QCoreApplication.translate("Form", u"16\u4f4d\uff1a1001001111100010", None))
         self.label_23.setText(QCoreApplication.translate("Form", u"<html><head/><body><p>32\u4f4d\uff1a01010001001110100110110001001111</p></body></html>", None))
-        self.label_24.setText(QCoreApplication.translate("Form", u"<html><head/><body><p>48\u4f4d\uff1a1100001101101010101101</p><p>1011110011000110101011</p></body></html>", None))
+        self.label_24.setText(QCoreApplication.translate("Form", u"<html><head/><body><p>48\u4f4d\uff1a110000110110101010110110</p><p>111100110001101010111100</p></body></html>", None))
     # retranslateUi
-
