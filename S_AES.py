@@ -1,4 +1,4 @@
-#异或
+
 def yihuo(str, key):
     result = ''.join(['0' if s == k else '1' for s, k in zip(str, key)])
     return result
@@ -205,7 +205,6 @@ def CBC_en(text, key):
         k0 = r
         R = R + r  # 连接密文
     Result = R[1:len(text) + 1]
-    print("CBC模式下的S-AES加密结果：", Result)
     return Result
 
 
@@ -222,7 +221,6 @@ def CBC_de(text, key):
         k0 = p0
         R = R + p1  # 连接密文
     Result = R[1:len(text) + 1]
-    print("CBC模式下的S-AES解密结果：", Result)
     return Result
 
 
@@ -243,4 +241,4 @@ print("\n更改/替换密文中的片段，将第一个密文分组替换为与�
 print("对错误密文进行解密")
 m2=CBC_de(m1,k)
 print("\n对两次解密结果进行异或操作，得出错误密文解密出的明文共有14位错误，错误位置见下方，1代表错误：")
-print(xor(m0,m2))'''
+print(yihuo(m0,m2))'''
