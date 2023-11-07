@@ -1,4 +1,4 @@
-
+#异或
 def yihuo(str, key):
     result = ''.join(['0' if s == k else '1' for s, k in zip(str, key)])
     return result
@@ -141,24 +141,33 @@ class S_AES:
         return mingwen
 
 #单重加密
-def single_use(text, key):
+def single_use_jiami(text, key):
     s_aes = S_AES(key)
     enc = s_aes.jiami(text)
-    det = s_aes.jiemi(enc)
-    return enc, det
+    return enc
+
+def single_use_jiemi(text, key):
+    s_aes = S_AES(key)
+    det = s_aes.jiemi(text)
+    return det
 
 # 双重加密
-def dou_use(text, key):
+def dou_use_jiami(text, key):
     s_aes1 = S_AES(key[0:16])
     s_aes2 = S_AES(key[16:32])
     midc = s_aes1.jiami(text)
     enc = s_aes2.jiami(midc)
-    midt = s_aes2.jiemi(enc)
+    return enc
+
+def dou_use_jiemi(text, key):
+    s_aes1 = S_AES(key[0:16])
+    s_aes2 = S_AES(key[16:32])
+    midt = s_aes2.jiemi(text)
     det = s_aes1.jiemi(midt)
-    return enc, det
+    return det
 
 #三重加密
-def tri_use(text, key):
+def tri_use_jiami(text, key):
     k1 = key[:16]
     k2 = key[16:32]
     k3 = key[32:48]
@@ -168,12 +177,19 @@ def tri_use(text, key):
     r1 = aes1.jiami(text)
     r2 = aes2.jiemi(r1)
     r3 = aes3.jiami(r2)
-    d1 = aes3.jiemi(r3)
+    return r3
+
+def tri_use_jiemi(text, key):
+    k1 = key[:16]
+    k2 = key[16:32]
+    k3 = key[32:48]
+    aes1 = S_AES(k1)
+    aes2 = S_AES(k2)
+    aes3 = S_AES(k3)
+    d1 = aes3.jiemi(text)
     d2 = aes2.jiami(d1)
     d3 = aes1.jiemi(d2)
-    print("三重加密结果：", r3)
-    print("三重解密结果：", d3)
-    return r3, d3
+    return d3
 
 #CBC模式
 def CBC_en(text, key):
